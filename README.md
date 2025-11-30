@@ -1,2 +1,2 @@
-# miradasjuguetes.github.io
+# miradas-juguetes.github.io
 Somos Miradas Juguetes
