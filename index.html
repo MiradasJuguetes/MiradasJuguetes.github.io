@@ -157,47 +157,41 @@
     .about-section {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
       justify-content: center;
-      padding: 1rem 0;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 1.5rem 1rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      background: rgba(255,255,255,0.7);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     }
 
     .about-text {
       flex: 1;
       min-width: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
-      background: rgba(255,255,255,0.7);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: center;
+      padding: 1rem;
     }
 
     .about-text h2 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: var(--primary);
-      margin-bottom: 0.6rem;
+      margin-bottom: 1rem;
       font-weight: 700;
-      text-align: center;
     }
 
     .about-text p {
-      margin-bottom: 0.7rem;
-      font-size: 0.85rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
       color: var(--dark-text);
-      text-align: justify;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .about-image {
       flex: 1;
       min-width: 280px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -205,7 +199,7 @@
 
     .animated-image {
       width: 100%;
-      max-width: 60%;
+      max-width: 500px;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
@@ -215,7 +209,7 @@
     }
 
     .animated-image:hover {
-      transform: scale(1.03) rotate(-1deg);
+      transform: scale(1.02);
       box-shadow: 0 12px 30px rgba(0,0,0,0.2);
       filter: brightness(1) contrast(1.1);
     }
@@ -223,7 +217,7 @@
     @keyframes floatIn {
       from {
         opacity: 0;
-        transform: translateY(30px) scale(0.95);
+        transform: translateY(20px) scale(0.98);
       }
       to {
         opacity: 1;
@@ -500,7 +494,14 @@
       }
       .about-section {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.2rem;
+        padding: 1.2rem;
+      }
+      .about-text h2 {
+        font-size: 1.4rem;
+      }
+      .about-text p {
+        font-size: 0.9rem;
       }
       .animated-image {
         max-width: 90%;
@@ -537,7 +538,7 @@
       <div class="info-item"><strong>📞 +54 9 2617099644</strong><br>WhatsApp</div>
       <div class="info-item"><strong>📞 +54 9 2615564522</strong><br>WhatsApp</div>
       <div class="info-item"><strong>✉️ contacto@miradasjuguetes.com</strong><br>Email</div>
-      <div class="info-item"><strong>📦 Envíos a todo el país</strong><br></div>
+      <div class="info-item"><strong>📦 Envíos en 24/48 hs</strong><br>A todo el país</div>
     </div>
     <div class="btn-container">
       <a href="https://wa.me/5492617099644" target="_blank" class="btn btn-whatsapp">Escribinos</a>
@@ -550,16 +551,15 @@
     <div class="about-section">
       <div class="about-text">
         <h2>¿Qué es Miradas Juguetes?</h2>
-        <p>Inspirados en la psicomotricidad vivenciada de Bernard Aucouturier, creemos que “el movimiento es pensamiento”.</p>
-        <p>Cada pieza invita al niño a ser autor de su propio desarrollo, explorando materiales naturales sin imposición ni instrucción.</p>
-        <p>Jugar es aprender… y lo natural siempre conecta mejor con la esencia del niño.</p>
+        <p>Somos el espacio donde la experiencia y la teoría se unen para seleccionar el mejor juguete para tu hijo/a.</p>
+        <p>Con más de 20 años de trayectoria acompañando infancias y a sus familias, no elegimos juguetes al azar: elegimos herramientas de desarrollo.</p>
+        <p>Descubre la diferencia de una mirada experta.</p>
       </div>
       <div class="about-image">
         <img src="foto 1 mueble con juguetes.jpg" alt="Mueble con juguetes naturales" class="animated-image">
       </div>
     </div>
   </section>
-
   <!-- PRODUCTOS COMPLETOS -->
   <section class="section" id="productos">
     <h2 class="section-title">Nuestros Juguetes Naturales</h2>
@@ -1015,7 +1015,6 @@
       </div>
     </div>
   </section>
-
   <!-- LIGHTBOX -->
   <div id="lightbox" onclick="closeLightbox()">
     <div class="lightbox-arrows">
@@ -1037,6 +1036,7 @@
   </footer>
 
   <a href="https://wa.me/5492617099644" target="_blank" class="whatsapp-float">💬</a>
+
   <script>
     const productos = [
       ["foto 39 set 1 5 piezas con cesta.jpg", "foto 40 set 1 5 piezas con cesta.jpg"],
@@ -1124,7 +1124,7 @@
         ];
         const nombreProducto = nombres[index] || "un producto";
         const mensaje = `Hola, quiero consultar disponibilidad del ${nombreProducto}.`;
-        const url = `https://wa.me/5492617099644?text=${encodeURIComponent(mensaje)}`;
+        const url = `https://wa.me/5492617099644?text= ${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank');
       });
     });
